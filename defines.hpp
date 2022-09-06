@@ -151,19 +151,19 @@ public:
     {
         std::string singularityString = "";
         if (orbitAround > 0)
-            singularityString += "ÎÀĞÇ";
+            singularityString += "å«æ˜Ÿ";
         if ((singularity & EPlanetSingularity::TidalLocked) != EPlanetSingularity::None)
-            singularityString += "³±Ï«Ëø¶¨ÓÀÖçÓÀÒ¹";
+            singularityString += "æ½®æ±é”å®šæ°¸æ˜¼æ°¸å¤œ";
         if ((singularity & EPlanetSingularity::TidalLocked2) != EPlanetSingularity::None)
-            singularityString += "³±Ï«Ëø¶¨1:2";
+            singularityString += "æ½®æ±é”å®š1:2";
         if ((singularity & EPlanetSingularity::TidalLocked4) != EPlanetSingularity::None)
-            singularityString += "³±Ï«Ëø¶¨1:4";
+            singularityString += "æ½®æ±é”å®š1:4";
         if ((singularity & EPlanetSingularity::LaySide) != EPlanetSingularity::None)
-            singularityString += "ºáÌÉ×Ô×ª";
+            singularityString += "æ¨ªèººè‡ªè½¬";
         if ((singularity & EPlanetSingularity::ClockwiseRotate) != EPlanetSingularity::None)
-            singularityString += "·´Ïò×Ô×ª";
+            singularityString += "åå‘è‡ªè½¬";
         if ((singularity & EPlanetSingularity::MultipleSatellites) != EPlanetSingularity::None)
-            singularityString += "¶àÎÀĞÇ";
+            singularityString += "å¤šå«æ˜Ÿ";
         return singularityString;
     }
 
@@ -217,38 +217,38 @@ public:
         std::string text = "";
         if (type == EStarType::GiantStar)
         {
-            text = ((spectr <= ESpectrType::K) ? (text + "ºì¾ŞĞÇ") : ((spectr <= ESpectrType::F) ? (text + "»Æ¾ŞĞÇ") : ((spectr != ESpectrType::A) ? (text + "À¶¾ŞĞÇ") : (text + "°×¾ŞĞÇ"))));
+            text = ((spectr <= ESpectrType::K) ? (text + "çº¢å·¨æ˜Ÿ") : ((spectr <= ESpectrType::F) ? (text + "é»„å·¨æ˜Ÿ") : ((spectr != ESpectrType::A) ? (text + "è“å·¨æ˜Ÿ") : (text + "ç™½å·¨æ˜Ÿ"))));
         }
         else if (type == EStarType::WhiteDwarf)
         {
-            text += "°×°«ĞÇ";
+            text += "ç™½çŸ®æ˜Ÿ";
         }
         else if (type == EStarType::NeutronStar)
         {
-            text += "ÖĞ×ÓĞÇ";
+            text += "ä¸­å­æ˜Ÿ";
         }
         else if (type == EStarType::BlackHole)
         {
-            text += "ºÚ¶´";
+            text += "é»‘æ´";
         }
         else if (type == EStarType::MainSeqStar)
         {
             if(spectr == ESpectrType::A)
-                text = text + "AĞÍºãĞÇ";
+                text = text + "Aå‹æ’æ˜Ÿ";
             else if (spectr == ESpectrType::B)
-                text = text + "BĞÍºãĞÇ";
+                text = text + "Bå‹æ’æ˜Ÿ";
             else if (spectr == ESpectrType::F)
-                text = text + "FĞÍºãĞÇ";
+                text = text + "Få‹æ’æ˜Ÿ";
             else if (spectr == ESpectrType::G)
-                text = text + "GĞÍºãĞÇ";
+                text = text + "Gå‹æ’æ˜Ÿ";
             else if (spectr == ESpectrType::K)
-                text = text + "KĞÍºãĞÇ";
+                text = text + "Kå‹æ’æ˜Ÿ";
             else if (spectr == ESpectrType::M)
-                text = text + "MĞÍºãĞÇ";
+                text = text + "Må‹æ’æ˜Ÿ";
             else if (spectr == ESpectrType::O)
-                text = text + "OĞÍºãĞÇ";
+                text = text + "Oå‹æ’æ˜Ÿ";
             else
-                text = text + "XĞÍºãĞÇ";
+                text = text + "Xå‹æ’æ˜Ÿ";
         }
         return text;
     }

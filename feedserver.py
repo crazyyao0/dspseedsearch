@@ -6,19 +6,19 @@ log = logging.getLogger('werkzeug')
 log.setLevel(logging.ERROR)
 
 lock = threading.Lock()
-target = 32768
-current = 0
 app = Flask(__name__)
+tasks = [[j*100000, j*100000+100000, i] for i in range(32,65) for j in range(1000)]
+current = 0
+target = 33000
 
 @app.route('/feed')
 def feed():
-    global target
     global current
-    print(datetime.datetime.now(), "Request:", request.remote_addr, current)
     if current >= target:
-        response = make_response("-1")
+        response = make_response("false")
     else:
-        response = make_response("%d"%(current))
+        response = make_response(str(tasks[current]))
+        print(datetime.datetime.now(), "Request:", request.remote_addr, str(tasks[current]))
         current += 1
     return response
         

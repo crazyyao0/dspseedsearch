@@ -97,8 +97,8 @@ struct NameGen_t
 
     const char* alphabeta_letter[11]
     {
-    "¦Á", "¦Â", "¦Ã", "¦Ä", "¦Å", "¦Æ", "¦Ç", "¦È", "¦É", "¦Ê",
-    "¦Ë"
+    "Î±", "Î²", "Î³", "Î´", "Îµ", "Î¶", "Î·", "Î¸", "Î¹", "Îº",
+    "Î»"
     };
     int alphabeta_letterLength = 11;
 

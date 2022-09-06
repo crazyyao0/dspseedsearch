@@ -21,7 +21,7 @@ To run the project
 
 To compile the project
 
-    g++ -O3 -o DSPSeedCalc DSPSeedCalc.cpp
+    g++ -O3 -DSUPPORT_AVX2 -mavx2 -o DSPSeedCalc DSPSeedCalc.cpp
 
 Part of the code in LDB.hpp is generate by dsptheme.py and ThemeProtoSet.xml
 
